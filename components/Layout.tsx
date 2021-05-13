@@ -1,4 +1,6 @@
 import Nav from "./Nav";
+import Header from "./Header";
+import Footer from "./Footer";
 import styles from "../styles/Home.module.css";
 
 interface Props {
@@ -9,8 +11,12 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Nav />
-      <div className={styles.container}>
-        <main className={styles.main}>{children}</main>
+      <div >
+        <main className={styles.main}>
+          <Header />
+          {children}
+          <Footer />
+        </main>
       </div>
     </>
   );
